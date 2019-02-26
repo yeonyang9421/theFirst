@@ -1,10 +1,40 @@
 package oop;
 
 public class Hero {
-    String name;
-    int hp=100;
+    private String name;
+    private int hp;
+    public static int MONEY;
+    Sword sword;
+
+    public Hero(String name, int hp) {
+        this.name = name;
+        this.hp = hp;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getHp() {
+        return hp;
+    }
+
+    public void setHp(int hp) {
+        this.hp = hp;
+    }
+
+    static void setRandomMoney() {
+        Hero.MONEY = (int) (Math.random() * 1000);
+    }
 
     void attack() {
+        System.out.println(this.name + "는 공격했다.");
+        System.out.println("적에게 5포인트의 데미지를 주었다.");
+
     }
 
     void run() {
@@ -15,7 +45,7 @@ public class Hero {
     void sit(int sec) {
         this.hp += sec;
         System.out.println(this.name + " 는" + sec + "초 앉았다.");
-        System.out.println("HP가 " +  sec + "포인트 회복되었다.");
+        System.out.println("HP가 " + sec + "포인트 회복되었다.");
     }
 
     void slip() {
