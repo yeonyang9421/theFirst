@@ -30,6 +30,8 @@ public class Cleric {
         }
     }
 
+
+
     int pray(int prayTime) {
         int ranPoint = new Random().nextInt(2);
         int previousPoint = mp;

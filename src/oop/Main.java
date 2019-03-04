@@ -3,16 +3,25 @@ package oop;
 public class Main {
     public static void main(String[] args) {
 
-        Hero.setRandomMoney();
+/*        Hero.setRandomMoney();
         System.out.println(Hero.MONEY);
 
         Sword sword = new Sword();
         sword.name = "불의 검";
         sword.damage = 10;
         Hero.MONEY = 100;
+*/
+
+        PoisonKinoko poisonKinoko = new PoisonKinoko('A');
 
         Hero hero1 = new Hero("멋진기사", 100);
         Hero hero2 = new Hero("아서스", 50);
+
+        for (int i = 0; i < 6; i++) {
+            if(hero1.getHp()>=0){
+                poisonKinoko.attack(hero1);
+            }
+        }
 
         Wizard wizard = new Wizard();
         wizard.setName("제이나");
@@ -20,25 +29,23 @@ public class Main {
         Wand wand = new Wand();
         wizard.setWand(wand);
 
-        wizard.heal(hero1);
-        wizard.heal(hero2);
-        wizard.heal(hero2);
+//        wizard.setName("");
+//        System.out.println(wizard.getName());
 
+//        wizard.heal(hero1);
+//        wizard.heal(hero2);
+//        wizard.heal(hero2);
+/*
         hero1.sword = sword;
         System.out.println("용사 " + hero1.getName() + "을 생성했습니다.");
         System.out.println("현재의 무기는  " + hero1.sword.name);
-        Kinoko kinoko1 = new Kinoko();
+        Kinoko kinoko1 = new Kinoko('A');
         kinoko1.hp = 50;
-        kinoko1.suffix = 'A';
 
-        Kinoko kinoko2 = new Kinoko();
-        kinoko2.hp = 48;
-        kinoko2.suffix = 'B';
 
         //모험의 시작
         hero1.slip();
         kinoko1.run();
-        kinoko2.run();
         hero1.run();
 
         Cleric cleric = new Cleric("성직자");
@@ -63,5 +70,6 @@ public class Main {
         System.out.println(cleric.name + "의 현재  hp는 " + cleric.hp + " 입니다");
         System.out.println(cleric.name + "의 현재  mp는 " + cleric.mp + " 입니다");
         System.out.println("===============================");
+    */
     }
 }

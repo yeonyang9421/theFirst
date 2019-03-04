@@ -60,6 +60,6 @@ public class Wizard {
         wand.setPower(4);
         int recoverPoint = (int) (basePoint * this.wand.getPower());
         hero.setHp(hero.getHp() + recoverPoint);
-        System.out.println(hero.getName() + "의 HP를 " + recoverPoint + "회복했다.");
+        System.out.println(hero.getName() + "의 HP를 " + recoverPoint + "회복하여 HP가 " + hero.getHp() + "가 됨.");
     }
 }

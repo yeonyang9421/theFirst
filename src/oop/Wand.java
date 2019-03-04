@@ -1,6 +1,8 @@
 package oop;
 
 public class Wand {
+    public static final double MIN_POWER = 0.5;
+    public static final int MAX_POWER = 100;
     private String name;
     private double power;
 
@@ -23,7 +25,7 @@ public class Wand {
     }
 
     public void setPower(double power) {
-        if (power < 0.5 && power > 100) {
+        if (power < MIN_POWER && power > MAX_POWER) {
             throw new IllegalArgumentException("지팡이의 마력은 0.5 이상 100.0 이하여야 함");
         }
         this.power = power;
